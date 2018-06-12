@@ -2,7 +2,7 @@ package com.kvvssut.interviews.dsa.problem;
 
 public class NQueens {
 
-	private static final int boardLength = 4; // No of Queens
+	private static final int boardLength = 8; // No of Queens
 
 	private static final int[][] chessBoard;
 
@@ -72,7 +72,7 @@ public class NQueens {
 		}
 
 		// check for queen on lower left diagonal
-		for (int x = row - 1, y = col + 1; x >= 0 && y < boardLength; x--, y++) {
+		for (int x = row + 1, y = col - 1; x < boardLength && y >= 0; x++, y--) {
 			if (chessBoard[x][y] == 1) {
 				return false;
 			}

@@ -73,8 +73,8 @@ public class ProcessingDataWithJava8Streams {
 
 		Long count = strings.stream().count();
 		System.out.println("List count is : " + count);
-
-		int sum = personList.stream().mapToInt(p -> p.getAge()).sum();
+		
+		int sum = personList.stream().mapToInt(person -> person.getAge()).sum();
 		System.out.println("\nSum of ages is : " + sum);
 
 		OptionalDouble avg = personList.stream().mapToInt(p -> p.getAge())
